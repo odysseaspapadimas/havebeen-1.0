@@ -5,7 +5,6 @@ import Map from "../components/Map";
 import { firebase } from "../firebase/firebase";
 import { useEffect } from "react";
 import Head from "next/head";
-//AIzaSyASpYgsiTOsSgS2ABEVL8YrLZPxt_V3PTM
 const Dashboard = () => {
   const [user, loading, error] = useAuthState(firebase.auth());
   const router = useRouter();
