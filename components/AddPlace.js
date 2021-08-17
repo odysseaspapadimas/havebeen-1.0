@@ -50,7 +50,7 @@ const AddPlace = () => {
       <form
         onSubmit={handleAddPlace}
         className="flex flex-col justify-center items-center bg-gray-800 p-4 rounded-md space-y-2"
-        style={{width: "90vw", maxWidth: "90vw" }}
+        style={{ width: "90vw", maxWidth: "90vw"}}
       >
         <div className="flex justify-evenly items-center w-full">
           <label className="self-start" htmlFor="name">
@@ -80,7 +80,8 @@ const AddPlace = () => {
         <CountryDropdown
           value={country}
           onChange={(value) => setCountry(value)}
-          className="text-black w-11/12" style={{maxWidth: "60%"}}
+          className="text-black w-11/12 lg:w-1/2"
+          style={{ maxWidth: "60%" }}
         />
         <div className="flex flex-col justify-center items-center">
           <label htmlFor="desc">Description</label>
@@ -100,9 +101,18 @@ const AddPlace = () => {
             onChange={(date) => setDate(date)}
           />
         </div>
-        <div style={{ width: "100%" }}>
+        <div className="map w-full lg:w-4/12 " style={{ height: "80vw" }}>
           <Map coords={coords} setCoords={setCoords} />
         </div>
+        <style jsx>
+          {`
+            @media (min-width: 1024px) {
+              .map {
+                height: 30vw !important;
+              }
+            }
+          `}
+        </style>
         <button className="px-2 py-3 bg-red-500 rounded-md mt-2" type="submit">
           Add Place
         </button>

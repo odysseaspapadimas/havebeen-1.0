@@ -35,7 +35,7 @@ const Dashboard = () => {
               firebase.auth().signOut();
               router.back();
             }}
-            className="fixed top-3 right-3 px-3 py-3 bg-gray-800 rounded-md"
+            className="absolute -top-1 right-3 px-3 py-3 bg-gray-800 rounded-md"
           >
             Sign Out
           </button>

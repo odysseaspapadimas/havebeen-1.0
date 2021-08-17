@@ -3,7 +3,7 @@ import Marker from "./Marker";
 
 const Map = ({ coords, setCoords }) => {
   return (
-    <div style={{ height: "100vw", width: "100%" }}>
+    <div style={{ height: "100%", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_MAP_API_KEY }}
         defaultCenter={{ lat: 38.22, lng: 21.79 }}

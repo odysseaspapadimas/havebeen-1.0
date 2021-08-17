@@ -27,12 +27,13 @@ const Home = () => {
     };
     if (user) {
       console.log(!!!checkIfUserExists(), "ezz");
-      if (!!!checkIfUserExists) {
+      if (!!checkIfUserExists) {
         console.log("creating new user doc");
         db.collection("users").doc(user.uid).set({
           displayName: user.displayName,
           uid: user.uid,
           email: user.email,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         });
       }
       router.push("/dashboard");
@@ -41,7 +42,6 @@ const Home = () => {
 
   return (
     <div className="">
-      
       <Head>
         <title>HaveBeen. Places you have been.</title>
         <link rel="icon" href="/favicon.ico" />
