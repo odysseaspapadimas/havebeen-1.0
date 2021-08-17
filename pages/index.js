@@ -38,9 +38,10 @@ const Home = () => {
       router.push("/dashboard");
     }
   }, [user, loading]);
-  
+
   return (
     <div className="">
+      
       <Head>
         <title>HaveBeen. Places you have been.</title>
         <link rel="icon" href="/favicon.ico" />
@@ -52,11 +53,12 @@ const Home = () => {
         />
         <meta content="travel, diary, places, have been, been, havebeen" />
       </Head>
+
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         <main
-          className="flex flex-col justify-center items-center bg-primary text-white"
+          className="flex flex-col justify-center items-center"
           style={{ height: "100vh" }}
         >
           <div

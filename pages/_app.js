@@ -7,13 +7,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <ChakraProvider>
         <Component {...pageProps} />
-        <style jsx global>{`
-          body {
-            background-color: #0b0e11;
-            color: #fff;
-          }
-        `}</style>
       </ChakraProvider>
+      <style jsx global>
+        {`
+          body {
+            background-color: #0b0e11 !important;
+            color: #fff !important;
+          }
+        `}
+      </style>
     </>
   );
 }
