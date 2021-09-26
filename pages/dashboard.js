@@ -1,9 +1,8 @@
 import { useRouter } from "next/dist/client/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardMenu from "../components/DashboardMenu";
-import Map from "../components/Map";
 import { firebase } from "../firebase/firebase";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 const Dashboard = () => {
   const [user, loading, error] = useAuthState(firebase.auth());
@@ -30,6 +29,7 @@ const Dashboard = () => {
           </h1>
 
           <DashboardMenu />
+
           <button
             onClick={() => {
               firebase.auth().signOut();

@@ -10,6 +10,7 @@ const Places = ({ seeOnMap, setSelectedPlace }) => {
     db.collection("users").doc(user.uid).collection("places")
   );
 
+  console.log(colError, colLoading, snapshot, 'snapshot');
   return (
     <div>
       {colLoading ? (
